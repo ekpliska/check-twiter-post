@@ -1,5 +1,6 @@
 import React from 'react';
 import FinishedQuizStyle from './FinishedQuiz.module.css';
+import ButtonRetry from '../UI/Button/ButtonRetry';
 
 const FinishedQuiz = (props) => {
 
@@ -36,7 +37,8 @@ const FinishedQuiz = (props) => {
                 Правильно {successCount} из {props.quiz.length}
             </p>
             <div>
-                <button onClick={props.onRetry}>Повторить</button>
+                <ButtonRetry onClick={props.onRetry} type={'primary'}>Повторить</ButtonRetry>
+                <ButtonRetry type={'success'}>Перейти в список тестов</ButtonRetry>
             </div>
         </div>
     )
